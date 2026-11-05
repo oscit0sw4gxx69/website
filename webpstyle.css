@@ -1,0 +1,76 @@
+/* fav colors #ccffcc */
+
+/* Blurred header class with animated blur */
+.blurred-header {
+  font-size: 4em;
+  font-weight: bold;
+  text-align: left;
+  filter: blur(3px);
+  animation: blurPulse 2s ease-in-out infinite alternate;
+}
+
+/* Class for animated blur only */
+.animated-blur {
+  animation: blurPulse 2.3s ease-in-out infinite alternate;
+}
+
+/* Class for infinite hue shift only */
+.infinite-hue-shift {
+  animation: hueRotate 3s linear infinite;
+}
+
+/* NEW: Class for both blur and hue shift */
+.animated-blur-hue-shift {
+  animation: blurAndHueShift 3s linear infinite;
+}
+
+/* NEW: Class for subtle animated blur (small text) */
+.subtle-animated-blur {
+  animation: subtleBlurPulse 1.8s ease-in-out infinite alternate;
+}
+
+/* Blur pulse animation */
+@keyframes blurPulse {
+  0% { filter: blur(2px); }
+  100% { filter: blur(4px); }
+}
+
+/* Subtle blur pulse animation (small text) */
+@keyframes subtleBlurPulse {
+  0% { filter: blur(0.8px); }
+  100% { filter: blur(1.2px); }
+}
+
+/* Hue rotation animation */
+@keyframes hueRotate {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+/* Combined blur and hue shift animation */
+@keyframes blurAndHueShift {
+  0% { filter: blur(1px) hue-rotate(0deg); }
+  50% { filter: blur(2px) hue-rotate(180deg); }
+  100% { filter: blur(1px) hue-rotate(360deg); }
+}
+
+/* Link styles */
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: black;
+  text-decoration: none;
+}
+
+/* Gradient background */
+body {
+  background-color: #ffffff;
+  color: black;
+  font-family: Helvetica;
+
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
