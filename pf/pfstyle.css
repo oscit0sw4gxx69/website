@@ -1,0 +1,41 @@
+/* fav colors #ccffcc */
+
+/* Link styles */
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: black;
+  text-decoration: none;
+}
+
+/* classic underlined links, only inside class="classic-links" (e.g. KRI page) */
+.classic-links a:link { color: #0000ee; text-decoration: underline; }
+.classic-links a:visited { color: #551a8b; text-decoration: underline; }
+.classic-links a:hover { color: #ff0090; text-decoration: underline; }
+.classic-links a:active { color: red; text-decoration: underline; }
+
+/* blurry animated title (replaces opf.png) — change the text in pf.html */
+.blurred-header {
+  font-size: 4em;
+  font-weight: bold;
+  text-align: left;
+  margin: 0;
+  filter: blur(3px);
+  animation: blurPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes blurPulse {
+  0% { filter: blur(2px); }
+  100% { filter: blur(4px); }
+}
+
+body {
+  background-color: #ffffff;
+  color: black;
+  font-family: Helvetica;
+  
+ /* background-image: url("/ab/sc.png");
+  background-size: cover;
+  cursor: url('/ab/maus_s.png'), auto;*/
+}
